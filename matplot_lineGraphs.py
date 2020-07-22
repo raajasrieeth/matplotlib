@@ -37,7 +37,7 @@
 # plt.grid(True, color= 'm')# makes a magenta grid ,default is black
 #plt.savefig('Fig.png')# can add a directory , preceded by a comma else it is saved in current directory
 #plt.show()# displays
-#Economics tb 1.2
+#MY school assignment
 from matplotlib import pyplot as plt
 from matplotlib import style
 plt.style.use("seaborn")
