@@ -52,8 +52,20 @@
 
 import matplotlib.pyplot as plt 
 import matplotlib.dates as mpl_dates
+import matplotlib.style as mpl_style
 import numpy as np
 import pandas as pd
+mpl_style.use(['dark_background', 'seaborn', 'fast'])
+'''
+The fast style can be used to automatically set simplification and chunking parameters to
+reasonable settings to speed up plotting large amounts of data. It can be used simply by
+running:
+import matplotlib.style as mplstyle
+mplstyle.use('fast')
+It is very light weight, so it plays nicely with other styles, just make sure the fast style is
+applied last so that other styles do not overwrite the settings:
+mplstyle.use(['dark_background', 'ggplot', 'fast'])
+'''
 
 data = pd.read_csv("D:\\python_envs\\All_other_codes\\read.csv")
 
@@ -62,13 +74,13 @@ data.sort_values('Date' , inplace =True)#modifies data
 
 price_date = data['Date']#but are read as strings  , not as dates
 
-price_close = data['Close']
+price_close = data['Close']#these are the indexes through which pandas reads.
 
-plt.plot_date(price_date , price_close , linestyle='-')
-plt.gcf().autofmt_xdate()
+plt.plot_date(price_date , price_close , linestyle='-')#plots line
+plt.gcf().autofmt_xdate()#gets current figure , formats the dates on x-axis
 
 
-plt.gca().xaxis.set_major_formatter(mpl_dates.DateFormatter("%b , %d , %Y"))
+plt.gca().xaxis.set_major_formatter(mpl_dates.DateFormatter("%b , %d , %Y"))#formats to bettter layout
 
 plt.tight_layout()
 
