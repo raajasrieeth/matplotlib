@@ -1,5 +1,9 @@
+# PLotting the sine and cosine functions
+
+
 import numpy as np 
-from  matplotlib import pyplot as plt 
+from matplotlib import pyplot as plt 
+import matplotlib.style 
 
 plt.style.use('ggplot')
 
