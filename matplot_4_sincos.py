@@ -1,4 +1,4 @@
-# PLotting the sine and cosine functions
+# Plotting the sine and cosine functions
 
 
 import numpy as np 
