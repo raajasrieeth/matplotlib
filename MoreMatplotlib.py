@@ -7,7 +7,7 @@ import numpy as np
 ’array-like’ such as pandas data objects and numpy.matrix may or may not work as intended. It
 is best to convert these to numpy.array objects prior to plotting.'''
 
-# fig = plt.figure() # an empty figure with no Axe
+# fig = plt.figure() # an empty figure with no Axis
 # fig, ax = plt.subplots() # a figure with a single Axes ; usually used
 # fig, axs = plt.subplots(2, 2) # a figure with a 2x2 grid of Axes
 
